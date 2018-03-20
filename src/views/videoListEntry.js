@@ -1,4 +1,7 @@
 var VideoListEntryView = Backbone.View.extend({
+  // events: {
+  //   'click form input': 'handleClick'
+  // },
 
   initialize: function() {
     
@@ -10,6 +13,12 @@ var VideoListEntryView = Backbone.View.extend({
     this.$el.html(this.template(this.model.attributes));
     return this;
   },
+
+  // handleClick: function(e) {
+  //   var field = $(e.target).val();
+  //   console.log('e', e);
+  //   console.log('field', field);
+  // },
 
   template: templateURL('src/templates/videoListEntry.html')
 

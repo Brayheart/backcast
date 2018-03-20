@@ -13,7 +13,6 @@ var VideoListView = Backbone.View.extend({
     // console.log('here', this.$el.children().detach());
     this.$el.html(this.template());
     this.$('.video-list').append(this.collection.map(function(video) {
-      // console.log('HERE', video.snippet.title);
       return new VideoListEntryView({model: video}).render().$el;
     }));
 
