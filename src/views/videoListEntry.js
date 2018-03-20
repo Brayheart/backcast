@@ -1,11 +1,11 @@
 var VideoListEntryView = Backbone.View.extend({
 
   events: {
-    'click' : 'selectedVideo'
+    'click': 'selectedVideo'
   },
 
   // trigger a select event
-  selectedVideo : function() {
+  selectedVideo: function() {
     this.model.select();
   },
 
