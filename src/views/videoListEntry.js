@@ -1,24 +1,26 @@
 var VideoListEntryView = Backbone.View.extend({
-  // events: {
-  //   'click form input': 'handleClick'
-  // },
 
-  initialize: function() {
-    
-    this.render();
-    // console.log('listEntry', this.snippet);
+  events: {
+    'click' : 'selectedVideo'
   },
 
+  // trigger a select event
+  selectedVideo : function() {
+    this.model.select();
+  },
+
+  // initialize: function() {
+  //   this.render();
+  //   // console.log('listEntry', this.model.snippet);
+  // },
+
   render: function() {
+    // console.log('here', this.model.attributes);
     this.$el.html(this.template(this.model.attributes));
     return this;
   },
 
-  // handleClick: function(e) {
-  //   var field = $(e.target).val();
-  //   console.log('e', e);
-  //   console.log('field', field);
-  // },
+ 
 
   template: templateURL('src/templates/videoListEntry.html')
 
